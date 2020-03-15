@@ -29,7 +29,15 @@ let accion = process.argv[2];
 
 let ListarTareas = require('./listarTareas');
 
-//let EscribirNuevaTarea = require('./guardarTarea');
+//let nuevaTarea = require('./guardarTarea');
+
+let escribirNuevaTarea = (nombre, status) => {
+    return{titulo: nombre, estado: status};
+  };
+
+module.exports = escribirNuevaTarea;
+
+
 
 
 

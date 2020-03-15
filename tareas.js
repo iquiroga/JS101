@@ -7,8 +7,8 @@ let archivoTareas = {
         return JSON.parse(fs.readFileSync(this.archivo, 'utf-8'));
     },
 
-    escribirJSON: function () {
-        return fs.writeFileSync(this.archivo, JSON.stringify(this.leerJSON, 'utf-8'));
+    escribirJSON: function (nuevaTarea) {
+        return fs.writeFileSync(this.archivo, JSON.stringify(nuevaTarea, 'utf-8'));
     }
 
 }

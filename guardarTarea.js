@@ -1,16 +1,14 @@
 let archivoTareas = require('./tareas');
 
 let tareas = archivoTareas.leerJSON();
-//let escribirTareas = archivoTareas.escribirJSON();
 
-console.log(tareas);
+let escribirNuevaTarea = (nombre, status) => {
+  tareas.push({titulo: nombre, estado: status});
+};
 
+escribirNuevaTarea('Hola', 'Chau')
 
-/*let EscribirNuevaTarea = (titulo, estado) => {
-  tareas.push({titulo: titulo, estado: estado});
-}
+archivoTareas.escribirJSON(tareas)
 
-console.log(EscribirNuevaTarea('Hola', 'Chau'));
+module.exports = escribirNuevaTarea;
 
-
-module.exports = EscribirNuevaTarea;*/
