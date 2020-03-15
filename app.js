@@ -26,30 +26,15 @@
 //let archivoTareas = require('./tareas');
 
 const accion = process.argv[2];
-
-const ListarTareas = require('./listarTareas');
+const title = process.argv[3];
 
 const nuevaTarea = require('./guardarTarea');
 
 //nuevaTarea('Hola', 'Chau');
 
-
-
-
-
-
-
-
-/*switch(accion) {
+switch(accion) {
     case 'listar':
-        console.log('Listado de tareas');
-        
-        
-        
-        for (let i = 0;  i < tareas.length; i++) {
-            console.log(i + '. ' + tareas[i].titulo + ' - ' + tareas[i].estado);
-        }
-        console.log()
+        require('./listarTareas');
         break;
 
     // Micro desafío 1
@@ -57,10 +42,14 @@ const nuevaTarea = require('./guardarTarea');
     case undefined:
         console.log('Tenés que pasarme una acción');
         break;
-
+    //crear y guardar nueva tarea
+    case 'crear':
+        nuevaTarea(title, 'pendiente');
+        console.log('Nueva tarea creada');
+        break;
     // Micro desafío 2
     default:
         console.log('No entiendo qué me estás pidiendo');
-        console.log('Las acciones disponibles son: listar');
+        console.log('Las acciones disponibles son: (listar) o (crear "título de nuestra tarea)');
         break;
-}*/
+}
