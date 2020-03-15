@@ -25,17 +25,15 @@
 
 //let archivoTareas = require('./tareas');
 
-let accion = process.argv[2];
+const accion = process.argv[2];
 
-let ListarTareas = require('./listarTareas');
+const ListarTareas = require('./listarTareas');
 
-//let nuevaTarea = require('./guardarTarea');
+const nuevaTarea = require('./guardarTarea');
 
-let escribirNuevaTarea = (nombre, status) => {
-    return{titulo: nombre, estado: status};
-  };
+//nuevaTarea('Hola', 'Chau');
 
-module.exports = escribirNuevaTarea;
+
 
 
 

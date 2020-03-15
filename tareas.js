@@ -10,8 +10,5 @@ let archivoTareas = {
     escribirJSON: function (nuevaTarea) {
         return fs.writeFileSync(this.archivo, JSON.stringify(nuevaTarea, 'utf-8'));
     }
-
 }
-
 module.exports = archivoTareas;
-
